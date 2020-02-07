@@ -1,6 +1,6 @@
 # Prerequisites required for netconf-simulator
 
-Please ensure that your are familiar with the developer workflow:
+Please ensure that you are familiar with the developer workflow:
 
 - [Developer Workflow](https://docs.onosproject.org/developers/dev_workflow/)
 
