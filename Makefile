@@ -1,10 +1,7 @@
-# the ordering below looks back to front, but this is the way make works
-include ./build/build-tools/make/common.mk
-.PHONY: build-tools
-build-tools:
-	@if [ ! -d "./build/build-tools" ]; then cd build && git clone https://github.com/onosproject/build-tools.git; fi
+# if build-tools folder doesnt exist, check it out to build directory
+build-tools:=$(shell if [ ! -d "./build/build-tools" ]; then cd build && git clone https://github.com/onosproject/build-tools.git; fi)
 
--include build-tools
+include ./build/build-tools/make/common.mk
 
 ##
 # Add in project specific targets below
